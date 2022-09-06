@@ -30,6 +30,14 @@
                                 </p>
                             </a>
                         </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('book.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-book"></i>
+                            <p>
+                                مدیریت کتاب ها
+                            </p>
+                        </a>
+                    </li>
                     @endrole
 
                 </ul>

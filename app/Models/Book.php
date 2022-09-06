@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
+    protected $fillable = ['title','image'];
+    public function seasons(){
+        return $this->hasMany(Season::class);
+    }
 }
