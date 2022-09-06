@@ -54,6 +54,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('comment.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-comment"></i>
+                            <p>
+                                مدیریت نظرات ها
+                            </p>
+                        </a>
+                    </li>
                     @endrole
 
                 </ul>
