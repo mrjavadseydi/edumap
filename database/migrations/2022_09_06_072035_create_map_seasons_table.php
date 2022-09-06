@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('map_seasons', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\NeedMap::class);
+            $table->foreignIdFor(\App\Models\NeedMap::class)->cascadeOnDelete();
             $table->string('image');
             $table->string('title');
             $table->timestamps();

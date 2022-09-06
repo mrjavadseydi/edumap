@@ -12,10 +12,26 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                font-family: Vazirmatn !important;
+                direction: rtl;
+            }
+            *{
+                font-family: Vazirmatn !important;
+
+            }
+        </style>
+        @livewireStyles
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+
+    @livewireScripts
+
     </body>
+
 </html>

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('body');
             $table->tinyInteger('status');
-            $table->foreignIdFor(\App\Models\User::class);
-            $table->foreignIdFor(\App\Models\State::class);
+            $table->foreignIdFor(\App\Models\User::class)->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\State::class)->cascadeOnDelete();
             $table->text('keywords');
             $table->timestamps();
         });

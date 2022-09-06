@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('states', function (Blueprint $table) {
-            $table->id();
+        Schema::table('users', function (Blueprint $table) {
             $table->foreignIdFor(\App\Models\Province::class)->cascadeOnDelete();
-            $table->string('title');
-            $table->timestamps();
+            $table->foreignIdFor(\App\Models\State::class)->cascadeOnDelete();
         });
     }
 
@@ -28,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('states');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

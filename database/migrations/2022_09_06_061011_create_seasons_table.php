@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('seasons', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Book::class);
+            $table->foreignIdFor(\App\Models\Book::class)->cascadeOnDelete();
             $table->string('title');
             $table->timestamps();
         });

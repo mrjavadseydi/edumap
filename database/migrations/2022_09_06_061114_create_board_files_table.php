@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('board_files', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Board::class);
+            $table->foreignIdFor(Board::class)->cascadeOnDelete();
             $table->string('path');
             $table->timestamps();
         });
