@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+Route::middleware('role:admin')->prefix('admin')->group(function (){
+    Route::get('state', [StateController::class,'index'])->name('state.index');
+    Route::post('state', [StateController::class,'store'])->name('state.create');
+    Route::delete('state', [StateController::class,'delete'])->name('state.delete');
+
 });
