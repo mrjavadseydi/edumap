@@ -64,4 +64,12 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function state()
+    {
+        return $this->belongsTo(State::class);
+    }
+    public function province()
+    {
+        return $this->belongsTo(Province::class);
+    }
 }

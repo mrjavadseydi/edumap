@@ -28,10 +28,12 @@ Route::middleware([
     })->name('dashboard');
 });
 Route::middleware('role:admin')->prefix('admin')->group(function (){
+    Route::view('dashboard','panel.dashboard')->name('dashboard.index');
     Route::get('state', [StateController::class,'index'])->name('state.index');
     Route::post('state', [StateController::class,'store'])->name('state.create');
     Route::delete('state', [StateController::class,'delete'])->name('state.delete');
     Route::get('book', [\App\Http\Controllers\BookController::class,'index'])->name('book.index');
     Route::post('book', [\App\Http\Controllers\BookController::class,'store'])->name('book.create');
     Route::delete('book', [\App\Http\Controllers\BookController::class,'delete'])->name('book.delete');
+    Route::resource('users',\App\Http\Controllers\UserController::class)->except('show','create','store');
 });

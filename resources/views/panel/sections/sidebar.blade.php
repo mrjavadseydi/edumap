@@ -21,20 +21,36 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('dashboard.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-dashboard"></i>
+                            <p>
+                                داشبورد
+                            </p>
+                        </a>
+                    </li>
                     @role('admin')
-                        <li class="nav-item has-treeview">
-                            <a href="{{route('state.index')}}" class="nav-link">
-                                <i class="nav-icon fa fa-xing"></i>
-                                <p>
-                                    مدیریت بخش ها
-                                </p>
-                            </a>
-                        </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('state.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-xing"></i>
+                            <p>
+                                مدیریت بخش ها
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item has-treeview">
                         <a href="{{route('book.index')}}" class="nav-link">
                             <i class="nav-icon fa fa-book"></i>
                             <p>
                                 مدیریت کتاب ها
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('users.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-user"></i>
+                            <p>
+                                مدیریت کاربران ها
                             </p>
                         </a>
                     </li>
