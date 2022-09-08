@@ -102,8 +102,8 @@
         <div class="position-relative" dir="rtl">
             <img src="{{asset('assets/img/Rectangle 3.png')}}" alt="">
         </div>
-        <div class="position-relative" dir="rtl">
-            <img src="{{asset('assets/img/Rectangle 3.png')}}" alt="">
+        <div class="position-relative" dir="rtl" style="height: 107px">
+            <img src="{{asset('assets/img/slider-2.jpg')}}" alt="">
         </div>
     </div>
 </section>
