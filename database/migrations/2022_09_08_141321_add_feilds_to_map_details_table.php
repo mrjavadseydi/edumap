@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('need_maps', function (Blueprint $table) {
-            $table->id();
-            $table->foreignIdFor(\App\Models\Book::class)->cascadeOnDelete();
-//            $table->string('month');
-            $table->string('title');
-            $table->timestamps();
+        Schema::table('map_details', function (Blueprint $table) {
+            $table->foreignIdFor(\App\Models\MapSeason::class)->cascadeOnDelete();
+
         });
     }
 
@@ -29,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('need_maps');
+        Schema::table('ma_details', function (Blueprint $table) {
+            //
+        });
     }
 };

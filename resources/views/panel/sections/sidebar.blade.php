@@ -70,6 +70,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('need.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-map"></i>
+                            <p>
+                                مدیریت نقشه های ضروری
+                            </p>
+                        </a>
+                    </li>
                     @endrole
                     @role('manager')
                     <li class="nav-item has-treeview">

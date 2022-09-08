@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="StickyNav" id="fixmenu">
-        <div class="container">
+        <div class="container-fluid">
             <div class="sidebar">
                 <div class="hideSidebar"><i class="fa fa-close"></i></div>
                 <ul class="nav res-menu">

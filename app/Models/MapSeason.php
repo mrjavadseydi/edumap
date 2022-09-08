@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class MapSeason extends Model
 {
     use HasFactory;
+    protected $fillable = ['need_map_id','image','title'];
+    public function detail(){
+        return $this->hasMany(MapDetail::class);
+    }
 }
