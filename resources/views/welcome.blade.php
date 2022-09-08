@@ -128,39 +128,7 @@
                     </div>
                 </div>
             </section>
-            <div class="teacher-suggestion">
-                <h4 class="title">فارسی ششم ابتدایی</h4>
-                <div class=" teacher-suggestion-box">
-                    <div class="d-flex">
-                        <div class="img-box">
-                            <img src="{{asset('assets/img/book.png')}}" alt="">
-                        </div>
-                        <div class="specifications-box">
-                            <div class="">
-                                <img src="{{asset('assets/img/user-edit.svg')}}" alt="">
-                                سارا عزیزی
-                            </div>
-                            <div class="silver_color"><img src="{{asset('assets/img/link-2.svg')}}" alt="">پیوست ندارد
-                            </div>
-                            <div class=""><img src="{{asset('assets/img/document-text.svg')}}" alt="">فصل سوم</div>
-                            <div class=""><img src="{{asset('assets/img/calendar-edit.svg')}}" alt="">انتشار 1401/12/11
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dscp-box">
-                        <h3>عنوان پیشنهاد معلم در اینجا در حد یک خط نوشتهعنوان پیشنهاد معلم در اینجا در حد یک خط
-                            نوشتهعنوان پیشنهاد معلم در اینجا در حد یک خط نوشته</h3>
-                        <p>دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن متن کاربر میتواند بر روی مشاهده بیشتر
-                            کلیک کند دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن متن کاربر میتواند بر روی
-                            مشاهده
-                            در صورت زیاد بودن متن کاربر دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن متن
-                            کاربر
-                            میتواند بر روی مشاهده بیشتر کلیک کند دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن
-                            متن
-                            کاربر میتواند بر روی مشاهده در صورت زیاد بودن متن کاربر </p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 @endsection

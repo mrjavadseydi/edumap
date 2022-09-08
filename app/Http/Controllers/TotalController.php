@@ -93,6 +93,6 @@ class TotalController extends Controller
         return response()->json(['status'=>'ok']);
     }
     public function show(){
-
+        return view('total');
     }
 }
