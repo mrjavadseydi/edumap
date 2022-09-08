@@ -15,7 +15,8 @@ class BoardController extends Controller
      */
     public function index()
     {
-        //
+        $boards = Board::orderBy('id','desc')->paginate(10);
+        return view('panel.board.index',compact('boards'));
     }
 
     /**
@@ -65,38 +66,14 @@ class BoardController extends Controller
         return redirect()->back()->with('message',['type'=>'success','message'=>'پست شما با موفقیت ثبت شد و پس از تایید منتشر خواهد شد.']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update( $id,$status)
     {
-        //
+        Board::where('id',$id)->update([
+            'status' => $status
+        ]);
+        return back()->with('message',['type'=>'success','message'=>'با موفقیت انجام شد']);
     }
 
     /**
@@ -107,6 +84,7 @@ class BoardController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Board::whereId($id)->delete();
+        return response()->json(['status'=>'ok']);
     }
 }

@@ -78,6 +78,14 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('board.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-book-alt"></i>
+                            <p>
+                                مدیریت پست ها
+                            </p>
+                        </a>
+                    </li>
                     @endrole
                     @role('manager')
                     <li class="nav-item has-treeview">

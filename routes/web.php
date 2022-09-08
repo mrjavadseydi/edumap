@@ -46,6 +46,9 @@ Route::middleware('role:admin')->prefix('admin')->group(function (){
     Route::resource('need',\App\Http\Controllers\NeedMapController::class)->except('show');
     Route::resource('needSeason',\App\Http\Controllers\NeedSeasonController::class)->except('show');
     Route::resource('needDetail',\App\Http\Controllers\MapDetailController::class)->except('show');
+    Route::get('board',[\App\Http\Controllers\BoardController::class,'index'])->name('board.index');
+    Route::delete('board',[\App\Http\Controllers\BoardController::class,'delete'])->name('board.delete');
+    Route::get('board/{id}/{status}',[\App\Http\Controllers\BoardController::class,'update'])->name('board.update');
 });
 Route::middleware('auth')->group(function (){
     Route::post('comment', [\App\Http\Controllers\CommentController::class,'store'])->name('comment.store');
