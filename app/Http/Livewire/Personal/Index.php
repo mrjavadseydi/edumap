@@ -9,7 +9,7 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public $books,$book_id,$seasons=[],$season_id,$topics=[],$topic_id,$comments=null,$reply_comment = null,$commentable,$commentable_id;
+    public $books,$book_id,$seasons=[],$season_id,$topics=[],$topic_id,$comments=null,$add_comment=false,$reply_comment = null,$commentable,$commentable_id;
     protected $listeners = ['initReplyComment'=>'initReplyComment'];
     public function updateSeasons()
     {
@@ -27,6 +27,7 @@ class Index extends Component
     public function updateComments()
     {
         $this->comments = \App\Models\Comment::where([['commentable_id',$this->topic_id],['commentable_type','App\Models\Topic'],['status',1]])->get();
+        $this->add_comment = true;
     }
     public function initComment(){
            $this->commentable = Topic::class;

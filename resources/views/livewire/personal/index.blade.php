@@ -56,7 +56,7 @@
                 </div>
                 <div class="text-left">
                     @auth
-                        @if($comments!=null)
+                        @if($add_comment)
                             <button class="btn btn-default2" data-toggle="modal" data-target="#exampleModal"
                                     wire:click="initComment">
                                ارسال و ثبت نظر

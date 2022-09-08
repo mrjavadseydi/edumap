@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نفشه برنامه درسی</title>
+    <title>نقشه برنامه درسی</title>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick-theme.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
