@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\TotalMap;
 use Illuminate\Http\Request;
 
@@ -14,10 +15,9 @@ class TotalController extends Controller
      */
     public function index()
     {
-        $maps = TotalMap::orderBy('id','desc')->get();
+        $maps = TotalMap::orderBy('id','desc')->state()->paginate();
         return  view('panel.total.index',compact('maps'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -50,7 +50,21 @@ class TotalController extends Controller
      */
     public function edit($id)
     {
-        return view('panel.total.edit',['map'=>TotalMap::findOrFail($id)]);
+        $months = [
+            'فروردین',
+            'اردیبهشت',
+            'خرداد',
+            'تیر',
+            'مرداد',
+            'شهریور',
+            'مهر',
+            'آبان',
+            'آذر',
+            'دی',
+            'بهمن',
+            'اسفند'
+        ];
+        return view('panel.total.edit',['map'=>TotalMap::findOrFail($id),'months'=>$months,'books' => Book::all()]);
     }
 
     /**
@@ -73,9 +87,12 @@ class TotalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ً$id)
     {
         TotalMap::findOrFail($id)->delete();
         return response()->json(['status'=>'ok']);
+    }
+    public function show(){
+
     }
 }

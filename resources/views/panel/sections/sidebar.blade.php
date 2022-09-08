@@ -62,6 +62,24 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('total.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-map"></i>
+                            <p>
+                                مدیریت نقشه های اجماع
+                            </p>
+                        </a>
+                    </li>
+                    @endrole
+                    @role('manager')
+                    <li class="nav-item has-treeview">
+                        <a href="{{route('total.index')}}" class="nav-link">
+                            <i class="nav-icon fa fa-map"></i>
+                            <p>
+                                مدیریت نقشه های اجماع
+                            </p>
+                        </a>
+                    </li>
                     @endrole
 
                 </ul>

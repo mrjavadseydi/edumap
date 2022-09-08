@@ -44,4 +44,7 @@ Route::middleware('role:admin')->prefix('admin')->group(function (){
     Route::delete('comment', [\App\Http\Controllers\CommentController::class,'delete'])->name('comment.delete');
     Route::resource('total',\App\Http\Controllers\TotalController::class)->except('show');
 });
-Route::middleware('auth')->post('comment', [\App\Http\Controllers\CommentController::class,'store'])->name('comment.store');
+Route::middleware('auth')->group(function (){
+    Route::post('comment', [\App\Http\Controllers\CommentController::class,'store'])->name('comment.store');
+    Route::get('total', [\App\Http\Controllers\TotalController::class,'show'])->name('total.show');
+});
