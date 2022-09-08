@@ -44,6 +44,7 @@ class UserController extends Controller
         $user  = User::find($id);
         if ($request->filled('password')){
             $data = $request->all();
+            $data['password'] = bcrypt($request->password);
         }else{
             $data = $request->except('password');
         }

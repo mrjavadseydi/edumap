@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نقشه برنامه درسی</title>
+    <title>نقشه برداری درسی</title>
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick-theme.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
@@ -47,7 +47,7 @@
             <div class="sidebar">
                 <div class="hideSidebar"><i class="fa fa-close"></i></div>
                 <ul class="nav res-menu">
-                    <li><a href="#" class="active"> خانه</a></li>
+                    <li><a href="{{route('home')}}" class="active"> خانه</a></li>
                     <li class="dropdown"><a href="#"  class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> آشنایی </a>
                         <div class="dropdown-menu mr-5" aria-labelledby="dropdown01">
                             <a class="dropdown-item " style="color: black"  href="#">راهنما</a>
@@ -69,7 +69,7 @@
             <div class="d-flex align-items-center justify-content-between">
                 <button class="triggerSidebar btn"><i class="fa fa-bars"></i></button>
                 <ul class=" top-menu">
-                    <li><a href="#" class="active"> خانه</a></li>
+                    <li><a href="{{route('home')}}" class="active"> خانه</a></li>
                     <li><a href="#"  class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> آشنایی </a>
                         <div class="dropdown-menu mr-5" aria-labelledby="dropdown01">
                             <a class="dropdown-item " style="color: black"  href="#">راهنما</a>
@@ -128,11 +128,11 @@
                     <div class="flex-grow-1">
                         <div class="title">لینک های اصلی</div>
                         <ul class="contentpane">
-                            <li><a href="#">خانه </a></li>
+                            <li><a href="{{url('/')}}">خانه </a></li>
                             <li><a href="#">آشنایی</a></li>
                             <li><a href="#">شناخت نقشه برداری</a></li>
-                            <li><a href="#">نقشه ضروری مدارس </a></li>
-                            <li><a href="#">نقشه های اجماع </a></li>
+{{--                            <li><a href="{{route('map.show')}}">نقشه ضروری مدارس </a></li>--}}
+                            <li><a href="{{route('total.show')}}">نقشه های اجماع </a></li>
                         </ul>
                     </div>
                     <div class="flex-grow-1">
