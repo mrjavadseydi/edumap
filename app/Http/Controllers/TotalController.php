@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class TotalController extends Controller
 {
+    public function checkRole(){
+        if (!(auth()->user()->hasRole('admin')||auth()->user()->hasRole('manager'))){
+            abort(403);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +20,8 @@ class TotalController extends Controller
      */
     public function index()
     {
-        $maps = TotalMap::orderBy('id','desc')->state()->paginate();
+        $this->checkRole();
+        $maps = TotalMap::orderBy('id','desc')->states()->paginate();
         return  view('panel.total.index',compact('maps'));
     }
     /**
@@ -25,6 +31,8 @@ class TotalController extends Controller
      */
     public function create()
     {
+        $this->checkRole();
+
         $books = \App\Models\Book::all();
         $states = \App\Models\State::all();
         return view('panel.total.create',compact('books','states'));
@@ -38,6 +46,8 @@ class TotalController extends Controller
      */
     public function store(Request $request)
     {
+        $this->checkRole();
+
         TotalMap::create($request->all());
         return redirect()->back()->with('message',['type'=>'success','message'=>'با موفقیت ایجاد شد']);
     }
@@ -50,6 +60,8 @@ class TotalController extends Controller
      */
     public function edit($id)
     {
+        $this->checkRole();
+
         $months = [
             'فروردین',
             'اردیبهشت',
@@ -76,6 +88,8 @@ class TotalController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->checkRole();
+
         TotalMap::findOrFail($id)->update($request->all());
         return redirect()->back()->with('message',['type'=>'success','message'=>'با موفقیت ویرایش شد']);
 
@@ -89,6 +103,8 @@ class TotalController extends Controller
      */
     public function destroy(ً$id)
     {
+        $this->checkRole();
+
         TotalMap::findOrFail($id)->delete();
         return response()->json(['status'=>'ok']);
     }

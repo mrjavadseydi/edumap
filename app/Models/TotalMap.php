@@ -9,10 +9,11 @@ class TotalMap extends Model
 {
     use HasFactory;
     protected $fillable = ['book_id','state_id','month','title','body'];
-    public function scopeState($query){
+    public function scopeStates($query){
         if (auth()->user()->hasRole('admin')){
             return $query;
         }
+
         return $query->where('state_id',auth()->user()->state_id);
     }
     public function state(){
