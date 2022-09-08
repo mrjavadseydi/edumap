@@ -15,7 +15,7 @@ class NeedMapController extends Controller
      */
     public function index()
     {
-        $maps = NeedMap::orderBy('id', 'desc')->paginate(10);
+        $maps = NeedMap::with('season')->orderBy('id', 'desc')->paginate(10);
         return view('panel.need.index', compact('maps'));
     }
 
@@ -85,5 +85,9 @@ class NeedMapController extends Controller
         return response()->json(['status' => 'ok']);
     }
 
+    public function show($id){
+        $map = NeedMap::findOrFail($id);
+
+    }
 
 }

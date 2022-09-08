@@ -32,7 +32,7 @@
                                 <td>{{$loop->iteration+(((request()->page??1)-1)*10)}}</td>
                                 <td>{{$map->title}}</td>
                                 <td>{{$map->book->title}}</td>
-                                <td>{{$map->season()->count()}}</td>
+                                <td>{{$map->season->count()}}</td>
                                 <td>
 
                                     <a href="{{route('need.edit',$map->id)}}" data-id="{{$map->id}}" class="btn btn-warning btn-sm ">

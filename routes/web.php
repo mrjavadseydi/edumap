@@ -51,3 +51,5 @@ Route::middleware('auth')->group(function (){
     Route::post('comment', [\App\Http\Controllers\CommentController::class,'store'])->name('comment.store');
     Route::get('total', [\App\Http\Controllers\TotalController::class,'show'])->name('total.show');
 });
+
+Route::get('map/{id}',[\App\Http\Controllers\NeedMapController::class,'show'])->name('map.show');
