@@ -1,0 +1,110 @@
+* {
+  font-weight: 300;
+  transition: all 0.1s ease;
+}
+@font-face {
+  font-family: iransans;
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\).eot');
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\).ttf'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\).woff') format('woff'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\).woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: iransans-bold;
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\)_Bold.eot');
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\)_Bold.ttf'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\)_Bold.woff') format('woff'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\)_Bold.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;}
+@font-face {
+  font-family: iransans-light;
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\)_Light.eot');
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\)_Light.ttf'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\)_Light.woff') format('woff'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\)_Light.woff2') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;}
+
+@font-face {
+  font-family: iransans-medium;
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\)_Medium.eot');
+  src: url('./fonts/iransans/IRANSansWeb\(FaNum\)_Medium.ttf'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\)_Medium.woff') format('woff'),
+  url('./fonts/iransans/IRANSansWeb\(FaNum\)_Medium.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;}
+body{
+  direction: rtl;
+  text-align: right;
+  font-family: iransans;
+  font-size: 13px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+* {
+  box-sizing: border-box;
+}
+a:hover{
+  text-decoration: none;
+}
+ ul{
+  padding-right: 0;
+  margin-bottom: 0;
+}
+ul li{
+  list-style: none;
+}
+p{
+  margin-bottom: 0;
+}
+.slick-slide img {
+  width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+}
+.slick-current {
+  opacity: 1;
+}
+/*  */
+.lazy .slick-dots{
+  bottom: 5px !important;
+}
+
+.slick-dots li {
+  width:40px;
+}
+.lazy.slick-dotted.slick-slider {
+  margin-bottom: 0px !important;
+}
+.slick-dots li button {
+  width: 44px;
+
+}
+.slick-dots li button::before {
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  content: "";
+  opacity: 1;
+
+}
+.slick-dots li.slick-active button::before {
+  opacity: 1;
+  background: green;
+
+}

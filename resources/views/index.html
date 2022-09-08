@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نفشه برنامه درسی</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/fonts/icon.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+<div class="overlay"></div>
+<header class="header">
+    <div class="TopBar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="top-contact">
+                        <a href="#" class="btn "><img src="./assets/img/login.png" alt=""><span>ورود به
+									سایت</span></a>
+                        <a href="#" class="btn "><img src="./assets/img/profile-add.svg" alt=""></i><span>ثبت نام در
+									سایت</span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="./assets/img/logo.svg" alt="">
+                </div>
+                <div class="col-md-4 text-left">
+                    <a href="#" class="btn font-light">مشاهده سایر پست ها</a>
+                    <a href="#" class="btn btn-default2 font-light">صفحه شخصی</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="StickyNav" id="fixmenu">
+        <div class="container">
+            <div class="sidebar">
+                <div class="hideSidebar"><i class="fa fa-close"></i></div>
+                <ul class="nav res-menu">
+                    <li><a href="#" class="active"> خانه</a></li>
+                    <li><a href="#"> آشنایی </a></li>
+                    <li><a href="#">شناخت نقشه برداری</a></li>
+                    <li><a href="#">نقشه ضروری مدارس </a></li>
+                    <li><a href="#">نقشه های اجماع </a></li>
+
+                </ul>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <button class="triggerSidebar btn"><i class="fa fa-bars"></i></button>
+                <ul class=" top-menu">
+                    <li><a href="#" class="active"> خانه</a></li>
+                    <li><a href="#"> آشنایی <i class="fa fa-chevron-down"></i></a></li>
+                    <li><a href="#">شناخت نقشه برداری<i class="fa fa-chevron-down"></i></a></li>
+                    <li><a href="#">نقشه ضروری مدارس <i class="fa fa-chevron-down"></i></a></li>
+                    <li><a href="#">نقشه های اجماع <i class="fa fa-chevron-down"></i></a></li>
+
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" placeholder="جستجو کنید...." class="form-control">
+                    <button class="search-btn"><img src="./assets/img/search-normal.svg" alt=""></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</header>
+<section class="top-slider">
+    <div class="lazy slider" data-sizes="100vw" dir="ltr">
+        <div class="position-relative" dir="rtl">
+            <img src="./assets/img/Rectangle 3.png" alt="">
+        </div>
+        <div class="position-relative" dir="rtl">
+            <img src="./assets/img/Rectangle 3.png" alt="">
+        </div>
+    </div>
+</section>
+<div class="mycontent">
+    <div class="container">
+        <section class="individual-role">
+            <div class="head-box">
+                <div class="title-head">نقش فردی معلم</div>
+                <div class="head-line"></div>
+            </div>
+            <div class="">
+                <div class="form-box">
+                    <div class="select-role-box">
+                        <div class="custom-control custom-radio">
+
+                            <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                   value="customEx">
+                            <label for="customRadio" class="selected-lable">
+                                <img src="./assets/img/book.png" class="img-fluid" alt="">
+                            </label>
+                            <label class="custom-control-label" for="customRadio">ریاضی</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                   value="customEx">
+                            <label for="customRadio2" class="selected-lable">
+                                <img src="./assets/img/book.png" class="img-fluid" alt="">
+                            </label>
+                            <label class="custom-control-label" for="customRadio2">فارسی</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="customRadio3" name="example"
+                                   value="customEx">
+                            <label for="customRadio3" class="selected-lable">
+                                <img src="./assets/img/book.png" class="img-fluid" alt="">
+                            </label>
+                            <label class="custom-control-label" for="customRadio3">فارسی</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="usr">نام فصل کتاب </label>
+                            <select name="cars" class="custom-select" id="user">
+                                <option selected>انتخاب کنید</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="fiat">Fiat</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="usr">موضوع نظر </label>
+                            <select name="cars" class="custom-select" id="user">
+                                <option selected>انتخاب کنید</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="fiat">Fiat</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <button class="btn btn-default2" data-toggle="modal" data-target="#exampleModal"
+                                type="button">ارسال و ثبت نظر</button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="position-relative">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="head-box">
+                                        <div class="title-head">ثبت نظر</div>
+                                        <div class="head-line"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="usr">نام و نام خانوادگی </label>
+                                                <input type="text" class="form-control" id="usr"
+                                                       placeholder="مثال: الهه لطفی ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usr">ایمیل </label>
+                                                <input type="text" class="form-control" id="usr"
+                                                       placeholder="مثال: elahelotfi@gmal.com ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usr">کلمات کلیدی </label>
+                                                <textarea class="form-control" name="" id="" cols="30" rows="3"
+                                                          placeholder="مثال: درس ریاضی"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="usr">ایده و نظر </label>
+                                                <textarea class="form-control" name="" id="" cols="30" rows="10"
+                                                          placeholder="ایده و نظر خود را درباره عنوان درس مورد نظر وارد کنید"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div
+                                                class="d-flex align-items-center justify-content-between flex-wrap">
+                                                <div class="">
+                                                    <div class="custom-file" style="width: 80px">
+                                                        <input type="file"
+                                                               class="custom-file-input position-absolute"
+                                                               id="customFile" name="filename">
+                                                        <label class=" btn btn-border mb-0" for="customFile">آپلود
+                                                            فایل </label>
+                                                    </div>
+                                                    <span class="font-size-12 font-light">حجم فایل حداکثر300MB باشد
+															و نوع فرمت فایل تنها JPG-PNG-RAR
+															قابل قبول می باشد.</span>
+                                                </div>
+                                                <button class="btn btn-default2 mt-0" type="button">ارسال و ثبت
+                                                    نظر</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="other-suggestion">
+            <div class="head-box">
+                <div class="title-head">
+                    <span>پیشنهاد دیگر معلمان</span>
+                </div>
+                <div class="head-line"></div>
+            </div>
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="count-suggestion">36 پیشنهاد ثبت شده</div>
+                <div class="prev-next-btn">
+                    <button class="btn">قبلی</button>
+                    <button class="btn">بعدی</button>
+                </div>
+            </div>
+            <div id="comment-list">
+                <ul>
+                    <li>
+                        <div class="comment_item">
+                            <div class="name-commenter">
+                                <img src="./assets/img/user.png" alt="" class="img-fluid">
+                                <span class="mx-2">احمد عزیزی</span>
+                            </div>
+                            <div class="comment-box">
+                                <div class="">
+                                    <p>
+                                        در اینجا متن نظر معلم نوشته می شود این متن می تواند در حدود 7 خط باشد
+                                        در
+                                        صورتی که متن معلم بیشتر از7خط بود سه نقطه می خورد و کاربر می تواند برروی
+                                        مشاهده
+                                        بیشتر کلیک کند. که در این صورت متن به صورت مودال باز شده و متن کامل نمایش
+                                        داده
+                                        می
+                                        شود و یا متن به صورت کامل در همین جا نمایش داده می شود. در اینجا متن نظر
+                                        معلم
+                                        نوشته
+                                        می شود این متن می تواند در حدود7 خط باشد در صورتی که متن معلم بیشتر از7خط
+                                        بود سه
+                                        نقطه می خورد و کاربر می تواند برروی مشاهده بیشتر کلیک کند.
+                                    </p>
+                                    <div class="text-left">
+                                        <button class="btn btn-reply">
+                                            پاسخ به این پیشنهاد
+                                            <img src="./assets/img/repeat.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between bottom-box flex-wrap">
+                                    <p>انتشار: 20 خرداد 1400</p>
+                                    <div class="accept-comment d-flex align-items-center">
+                                        <p>آیا این پیشنهاد را قبول دارید؟</p>
+                                        <button class="btn">3<img src="./assets/img/like.svg" alt=""></button>
+                                        <button class="btn"><img src="./assets/img/dislike.svg" alt="">0</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="comment_item">
+                            <div class="name-commenter">
+                                <img src="./assets/img/user.png" alt="" class="img-fluid">
+                                <span class="mx-2">احمد عزیزی</span>
+                            </div>
+                            <div class="comment-box">
+                                <div class="">
+                                    <p>
+                                        در اینجا متن نظر معلم نوشته می شود این متن می تواند در حدود 7 خط باشد
+                                        در
+                                        صورتی که متن معلم بیشتر از7خط بود سه نقطه می خورد و کاربر می تواند برروی
+                                        مشاهده
+                                        بیشتر کلیک کند. که در این صورت متن به صورت مودال باز شده و متن کامل نمایش
+                                        داده
+                                        می
+                                        شود و یا متن به صورت کامل در همین جا نمایش داده می شود. در اینجا متن نظر
+                                        معلم
+                                        نوشته
+                                        می شود این متن می تواند در حدود7 خط باشد در صورتی که متن معلم بیشتر از7خط
+                                        بود سه
+                                        نقطه می خورد و کاربر می تواند برروی مشاهده بیشتر کلیک کند.
+                                    </p>
+                                    <div class="text-left">
+                                        <button class="btn btn-reply">
+                                            پاسخ به این پیشنهاد
+                                            <img src="./assets/img/repeat.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="comment_item_reply background-reply">
+                                    <div class="name-commenter">
+                                        <img src="./assets/img/user.png" alt="" class="img-fluid">
+                                        <span class="mx-2">احمد عزیزی</span>
+                                    </div>
+                                    <div class="comment-box">
+                                        <div class="">
+                                            <p>
+                                                در اینجا متن نظر معلم نوشته می شود این متن می تواند در حدود 7 خط
+                                                باشد
+                                                در
+                                                صورتی که متن معلم بیشتر از7خط بود سه نقطه می خورد و کاربر می تواند
+                                                برروی
+                                                مشاهده
+                                                بیشتر کلیک کند. که در این صورت متن به صورت مودال باز شده و متن کامل
+                                                نمایش
+                                                داده
+                                                می
+                                                شود و یا متن به صورت کامل در همین جا نمایش داده می شود. در اینجا متن
+                                                نظر
+                                                معلم
+                                                نوشته
+                                                می شود این متن می تواند در حدود7 خط باشد در صورتی که متن معلم بیشتر
+                                                از7خط
+                                                بود سه
+                                                نقطه می خورد و کاربر می تواند برروی مشاهده بیشتر کلیک کند.
+                                            </p>
+                                            <div class="text-left">
+                                                <button class="btn btn-reply">
+                                                    پاسخ به این پیشنهاد
+                                                    <img src="./assets/img/repeat.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between bottom-box flex-wrap">
+                                            <p>انتشار: 20 خرداد 1400</p>
+                                            <div class="accept-comment d-flex align-items-center">
+                                                <p>آیا این پیشنهاد را قبول دارید؟</p>
+                                                <button class="btn">3<img src="./assets/img/like.svg"
+                                                                          alt=""></button>
+                                                <button class="btn"><img src="./assets/img/dislike.svg"
+                                                                         alt="">0</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment_item_reply">
+                                    <div class="name-commenter">
+                                        <img src="./assets/img/user.png" alt="" class="img-fluid">
+                                        <span class="mx-2">احمد عزیزی</span>
+                                    </div>
+                                    <div class="comment-box">
+                                        <div class="">
+                                            <p>
+                                                در اینجا متن نظر معلم نوشته می شود این متن می تواند در حدود 7 خط
+                                                باشد
+                                                در
+                                                صورتی که متن معلم بیشتر از7خط بود سه نقطه می خورد و کاربر می تواند
+                                                برروی
+                                                مشاهده
+                                                بیشتر کلیک کند. که در این صورت متن به صورت مودال باز شده و متن کامل
+                                                نمایش
+                                                داده
+                                                می
+                                                شود و یا متن به صورت کامل در همین جا نمایش داده می شود. در اینجا متن
+                                                نظر
+                                                معلم
+                                                نوشته
+                                                می شود این متن می تواند در حدود7 خط باشد در صورتی که متن معلم بیشتر
+                                                از7خط
+                                                بود سه
+                                                نقطه می خورد و کاربر می تواند برروی مشاهده بیشتر کلیک کند.
+                                            </p>
+                                            <div class="text-left">
+                                                <button class="btn btn-reply">
+                                                    پاسخ به این پیشنهاد
+                                                    <img src="./assets/img/repeat.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between bottom-box flex-wrap">
+                                            <p>انتشار: 20 خرداد 1400</p>
+                                            <div class="accept-comment d-flex align-items-center">
+                                                <p>آیا این پیشنهاد را قبول دارید؟</p>
+                                                <button class="btn">3<img src="./assets/img/like.svg"
+                                                                          alt=""></button>
+                                                <button class="btn"><img src="./assets/img/dislike.svg"
+                                                                         alt="">0</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between bottom-box flex-wrap">
+                                    <p>انتشار: 20 خرداد 1400</p>
+                                    <div class="accept-comment d-flex align-items-center">
+                                        <p>آیا این پیشنهاد را قبول دارید؟</p>
+                                        <button class="btn">3<img src="./assets/img/like.svg" alt=""></button>
+                                        <button class="btn"><img src="./assets/img/dislike.svg" alt="">0</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="counter-sec">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-3 col-6">
+                    <div class="count-box">
+                        <div class="count-text">
+                            <span><i class="fa fa-plus"></i></span>
+                            <div class="count d-inline-block">121</div>
+                        </div>
+                        <h5>نقشه های آموزشی </h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="count-box">
+                        <div class="count-text">
+                            <span><i class="fa fa-plus"></i></span>
+                            <div class="count d-inline-block">121</div>
+                        </div>
+                        <h5>دروس و اهداف</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="count-box">
+                        <div class="count-text">
+                            <span><i class="fa fa-plus"></i></span>
+                            <div class="count d-inline-block">121</div>
+                        </div>
+                        <h5>معلم و استاد</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="count-box">
+                        <div class="count-text">
+                            <span><i class="fa fa-plus"></i></span>
+                            <div class="count d-inline-block">121</div>
+                        </div>
+                        <h5>دانش آموز های فعال</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mycontent">
+        <div class="container">
+            <section class="lesson-plan">
+                <div class="head-box">
+                    <div class="title-head">شناخت نقشه برداری برنامه دروس</div>
+                    <div class="head-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="lesson-item">
+                            <div class="img-box">
+                                <img src="./assets/img/map-location 1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h3><a href="#">چرخه نقشه برداری</a></h3>
+                                <p>زمان در این نقشه ها عنصر بسیار مهم است و نیاز است معلمان در زمان های مشخص به ثبت
+                                    دانش
+                                    خود
+                                    بپردازند ولی حتما ماهانه جلسه نمایندگان معلم تشکیل می شود .پس نیاز به وقت اختصاص
+                                    یافته
+                                    دا
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="lesson-item">
+                            <div class="img-box">
+                                <img src="./assets/img/map-location 1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h3><a href="#">تصویر سازی هوشمند</a></h3>
+                                <p>نقشه های ذهنی معلمان در این سامانه به گونه ای طراحی می شود که در قالب نقشه های
+                                    الکترونیک
+                                    در
+                                    یک نگاه قابلیت دیدن داشته باشد و حشو و مطالب اضافی خودداری می کند. و مانند
+                                    درختچه ای
+                                    دانش و
+                                    تجارب خاص معلم را فیلتر می کند.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="lesson-item">
+                            <div class="img-box">
+                                <img src="./assets/img/map-location 1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h3><a href="#">هدف</a></h3>
+                                <p>هدف از ایجاد سامانه نقشه برداری برنامه درسی، ثبت و ذخیره دانش و تجارب هر معلم و
+                                    ایجاد
+                                    گفتگو و
+                                    نظر در مورد تجارب معلمان و اشتراک دانش و رسیدن به یکپارچگی، ساختارمند نمودن دانش
+                                    و
+                                    همپوشانی
+                                    آنچه درکلاس های درس اتفاق می افتد در جهت بالا بردن و توسعه حرفه ای معلمان .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="lesson-item">
+                            <div class="img-box">
+                                <img src="./assets/img/map-location 1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h3><a href="#">سامانه</a></h3>
+                                <p>این سامانه از سه قست عمده تشکیل شده 1- قسمتی برای ثبت اطلاعات به نام خود معلم
+                                    (نقشه
+                                    فردی
+                                    معلم)، 2- قسمتی برای ثبت اطلاعات نماینده هر پایه در هر مدرسه (نقشه اجماع) و 3-
+                                    قسمتی
+                                    برای
+                                    ثبت گزارشات مدیران مدارس ( نقشه ضروری) .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="teacher-suggestion">
+                <h4 class="title">فارسی ششم ابتدایی</h4>
+                <div class=" teacher-suggestion-box">
+                    <div class="d-flex">
+                        <div class="img-box">
+                            <img src="./assets/img/book.png" alt="">
+                        </div>
+                        <div class="specifications-box">
+                            <div class="">
+                                <img src="./assets/img/user-edit.svg" alt="">
+                                سارا عزیزی
+                            </div>
+                            <div class="silver_color"><img src="./assets/img/link-2.svg" alt="">پیوست ندارد</div>
+                            <div class=""><img src="./assets/img/document-text.svg" alt="">فصل سوم</div>
+                            <div class=""> <img src="./assets/img/calendar-edit.svg" alt="">انتشار 1401/12/11</div>
+                        </div>
+                    </div>
+                    <div class="dscp-box">
+                        <h3>عنوان پیشنهاد معلم در اینجا در حد یک خط نوشتهعنوان پیشنهاد معلم در اینجا در حد یک خط
+                            نوشتهعنوان پیشنهاد معلم در اینجا در حد یک خط نوشته</h3>
+                        <p>دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن متن کاربر میتواند بر روی مشاهده بیشتر
+                            کلیک کند دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن متن کاربر میتواند بر روی
+                            مشاهده
+                            در صورت زیاد بودن متن کاربر دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن متن
+                            کاربر
+                            میتواند بر روی مشاهده بیشتر کلیک کند دراینجا متن نظر معلم نوشته می شود در صورت زیاد بودن
+                            متن
+                            کاربر میتواند بر روی مشاهده در صورت زیاد بودن متن کاربر </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<footer>
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 FooterPane1">
+                    <div class="title">
+                        <img src="./assets/img/logo-green.svg" alt="">
+                    </div>
+                    <p>دراینجا توضیحی درباره سایت و حوزه فعالیت سایت نوشته می شود این متن می تواند در حدود 5 خط باشد
+                        دراینجا توضیحی درباره سایت و حوزه فعالیت سایت نوشته می شود این متن می تواند در حدود 5 خط
+                        باشد دراینجا توضیحی درباره سایت و حوزه فعالیت سایت </p>
+                </div>
+                <div class="col-lg-5 col-md-7 FooterPane2 d-flex">
+                    <div class="flex-grow-1">
+                        <div class="title">لینک های اصلی</div>
+                        <ul class="contentpane">
+                            <li><a href="#">خانه </a></li>
+                            <li><a href="#">آشنایی</a></li>
+                            <li><a href="#">شناخت نقشه برداری</a></li>
+                            <li><a href="#">نقشه ضروری مدارس </a></li>
+                            <li><a href="#">نقشه های اجماع </a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="title">لینک های مفید</div>
+                        <ul class="contentpane">
+                            <li><a href="#">درباره ما </a></li>
+                            <li><a href="#">تماس با ما</a></li>
+                            <li><a href="#">سوالات متداول</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 FooterPane3">
+                    <div class="title">تماس با ما</div>
+                    <div class="contentpane">
+                        <ul>
+                            <li>
+                                <strong>تلفن تماس: </strong>
+                                <span>06347657634</span>
+                            </li>
+                            <li>
+                                <strong>ایمیل:</strong> maping@gmail.com
+                            </li>
+                            <li>
+                                <strong>دورنما: </strong><a href="#">maping</a>
+                            </li>
+                            <li><strong>آدرس: </strong>
+                                <a href="#">بیرجند، خیابان غفاری، انتهای غفاری ، جنب پارک علم و فناوری</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-box">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p>طراحی و توسعه جواد صیدی</p>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="follow-us">
+                        <li><a href="#">
+                            <img src="./assets/img/telegram.svg" alt="">
+                        </a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="./assets/js/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/js/script.js" type="text/javascript"></script>
+
+
+
+</body>
+
+</html>

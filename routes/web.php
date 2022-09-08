@@ -42,4 +42,6 @@ Route::middleware('role:admin')->prefix('admin')->group(function (){
     Route::get('comment', [\App\Http\Controllers\CommentController::class,'index'])->name('comment.index');
     Route::get('comment/{id}/{status}', [\App\Http\Controllers\CommentController::class,'update'])->name('comment.update');
     Route::delete('comment', [\App\Http\Controllers\CommentController::class,'delete'])->name('comment.delete');
+    Route::resource('total',\App\Http\Controllers\TotalController::class)->except('show');
 });
+Route::middleware('auth')->post('comment', [\App\Http\Controllers\CommentController::class,'store'])->name('comment.store');

@@ -30,7 +30,7 @@
                         <tbody>
                         @foreach($comments as $comment)
                             <tr>
-                                <td>{{$loop->iteration+((request()->page-1??1)*10)}}</td>
+                                <td>{{$loop->iteration+(((request()->page??1)-1)*10)}}</td>
                                 <td>{{$comment->user->name}}</td>
                                 <td>{{$comment->user->province->title}}</td>
                                 <td>{{$comment->title}}</td>

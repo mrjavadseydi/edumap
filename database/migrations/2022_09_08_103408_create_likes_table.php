@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->id();
-            $table->morphs('commentable');
-            $table->text('body');
-            $table->tinyInteger('status');
-            $table->foreignIdFor(\App\Models\User::class)->cascadeOnDelete();
-            $table->foreignIdFor(\App\Models\State::class)->cascadeOnDelete();
-            $table->text('keywords');
+            $table->ipAddress('ip');
+            $table->tinyInteger('type')->default(0);
+            $table->foreignIdFor(\App\Models\Comment::class)->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('likes');
     }
 };
