@@ -1,58 +1,60 @@
 @extends('layouts.master')
 @section('content')
-    <div class="bg-white pb-130 pt-45">
-        <div class="container">
-            <div class="head-box ">
-                <div class="title-head">{{$map->title}}</div>
-                <div class="head-line"></div>
-            </div>
+    <div class="container">
+        <div class="pb-130 pt-45">
+            <div class="container">
+                <div class="head-box ">
+                    <div class="title-head">{{$map->title}}</div>
+                    <div class="head-line"></div>
+                </div>
 
-            <!--map vis-->
-            <div class="text-center mb-2">
-                <div style="min-height: 500px;" id="mynetwork_olom"></div>
-            </div>
+                <!--map vis-->
+                <div class="text-center mb-2">
+                    <div style="min-height: 500px;" id="mynetwork_olom"></div>
+                </div>
 
 
-            @foreach($map->season as $season)
-                <section class="add-text-box lesson-map-box" id="season{{$season->id}}">
-                    <div class="text-center mb-5">
-                        <img src="{{asset('uploads/'.$season->image)}}" class="img-fluid" alt="">
-                    </div>
-                    <div class="d-flex justify-content-between flex-wrap">
-                        <div class="">
-                            <div class="head-box">
-                                <div class="title-head">{{$season->title}}</div>
-                                <div class="head-line"></div>
-                            </div>
+                @foreach($map->season as $season)
+                    <section class="add-text-box lesson-map-box" id="season{{$season->id}}">
+                        <div class="text-center mb-5">
+                            <img src="{{asset('uploads/'.$season->image)}}" class="img-fluid" alt="">
                         </div>
-
-                        <div class="mb-3">
-                            <div data-toggle="collapse" data-target="#demo{{$season->id}}"
-                                 class="first-color cursor-pointer">
-                                مشاهده همه پیشنهادات این فصل
-                                <i class="fa fa-chevron-circle-down"></i>
+                        <div class="d-flex justify-content-between flex-wrap">
+                            <div class="">
+                                <div class="head-box">
+                                    <div class="title-head">{{$season->title}}</div>
+                                    <div class="head-line"></div>
+                                </div>
                             </div>
 
+                            <div class="mb-3">
+                                <div data-toggle="collapse" data-target="#demo{{$season->id}}"
+                                     class="first-color cursor-pointer">
+                                    مشاهده همه پیشنهادات این فصل
+                                    <i class="fa fa-chevron-circle-down"></i>
+                                </div>
 
+
+                            </div>
                         </div>
-                    </div>
-                    <div id="demo{{$season->id}}" class="collapse show">
-                        <ul class="suggest-list">
-                            @foreach($season->detail as $detail)
-                                <li class="suggest-box">
-                                    <h3>{{$detail->title}}</h3>
-                                    <p>
-                                        {!! $detail->body !!}
-                                    </p>
-                                </li>
+                        <div id="demo{{$season->id}}" class="collapse show">
+                            <ul class="suggest-list">
+                                @foreach($season->detail as $detail)
+                                    <li class="suggest-box">
+                                        <h3>{{$detail->title}}</h3>
+                                        <p>
+                                            {!! $detail->body !!}
+                                        </p>
+                                    </li>
 
-                            @endforeach
+                                @endforeach
 
-                        </ul>
-                    </div>
-                </section>
+                            </ul>
+                        </div>
+                    </section>
 
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-4 text-left">
                     <a href="#" class="btn font-light">مشاهده سایر پست ها</a>
-                    <a href="#" class="btn btn-default2 font-light">صفحه شخصی</a>
+                    <a href="{{route('board.create')}}#main" class="btn btn-default2 font-light">افزودن نوشته</a>
                 </div>
             </div>
         </div>
