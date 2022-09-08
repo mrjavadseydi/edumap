@@ -14,12 +14,14 @@ class Index extends Component
     public function updateSeasons()
     {
         $this->topics=[];
-        $this->comments=null;
         $this->seasons = Book::find($this->book_id)->seasons;
+        $topics_id = Topic::whereIn('season_id',$this->seasons->pluck('id'))->pluck('id');
+        $this->comments=\App\Models\Comment::where([['commentable_type','App\Models\Topic'],['status',1]])->whereIn('commentable_id',$topics_id)->get();
     }
     public function updateTopics(){
-        $this->comments=null;
         $this->topics = Topic::where('season_id',$this->season_id)->get();
+        $this->comments=\App\Models\Comment::where([['commentable_type','App\Models\Topic'],['status',1]])->whereIn('commentable_id',$this->topics->pluck('id'))->get();
+
     }
 
     public function updateComments()
