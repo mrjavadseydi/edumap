@@ -54,9 +54,16 @@
 {{--                        <img src="{{asset('assets/img/user-edit.svg')}}" alt="">--}}
 {{--                        سارا عزیزی--}}
 {{--                    </div>--}}
-{{--                    <div class="silver_color"><img src="{{asset('assets/img/link-2.svg')}}" alt="">پیوست ندارد--}}
-{{--                    </div>--}}
-{{--                    <div class=""><img src="{{asset('assets/img/document-text.svg')}}" alt="">فصل سوم</div>--}}
+                    @role('admin')
+                    <div class="">
+                        استان:
+                        {{\App\Models\Province::where('id',$map->state->province_id)->first()->title}}
+                    </div>
+                    <div class="">
+                        منطقه:
+                        {{$map->state->first()->title}}
+                    </div>
+                    @endrole
                     <div class=""><img src="{{asset('assets/img/calendar-edit.svg')}}" alt="">انتشار
                         {{\Morilog\Jalali\Jalalian::fromDateTime($map->created_at)->format('Y/m/d')}}
                     </div>
