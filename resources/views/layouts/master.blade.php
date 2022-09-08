@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/fonts/icon.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+    @stack('styles')
     @livewireStyles
 </head>
 
@@ -168,6 +169,7 @@
 <script src="{{asset('/assets/js/popper.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('/assets/js/slick.min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('/assets/js/script.js')}}" type="text/javascript"></script>
+@stack('scripts')
 @livewireScripts
 
 </body>

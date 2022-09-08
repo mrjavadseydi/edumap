@@ -87,7 +87,7 @@ class NeedMapController extends Controller
 
     public function show($id){
         $map = NeedMap::findOrFail($id);
-
+        return view('need',compact('map'));
     }
 
 }
