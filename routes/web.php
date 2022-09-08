@@ -58,3 +58,4 @@ Route::middleware('auth')->group(function (){
 });
 
 Route::get('map/{id}',[\App\Http\Controllers\NeedMapController::class,'show'])->name('map.show');
+Route::get('boards',[\App\Http\Controllers\BoardController::class,'all'])->name('boards');

@@ -29,7 +29,7 @@
 
                             <div class="mb-3">
                                 <div data-toggle="collapse" data-target="#demo{{$season->id}}"
-                                     class="first-color cursor-pointer">
+                                     class="first-color cursor-pointer col-pass " >
                                     مشاهده همه پیشنهادات این فصل
                                     <i class="fa fa-chevron-circle-down"></i>
                                 </div>
@@ -105,6 +105,10 @@
         $('.tree .icon').click(function () {
             $(this).parent().toggleClass('expanded').closest('li').find('ul:first').toggleClass('show-effect');
         });
+        elems  = document.querySelectorAll('.col-pass');
+        for(var i = 0; i < elems.length; i++) {
+            elems[i].click();
+        }
     </script>
 @endpush
 @push('styles')

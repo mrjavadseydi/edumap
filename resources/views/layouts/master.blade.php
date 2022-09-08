@@ -20,7 +20,7 @@
 <div class="overlay"></div>
 <header class="header">
     <div class="TopBar">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4">
                     <div class="top-contact">
@@ -36,22 +36,33 @@
                     <img src="{{asset('assets/img/logo.svg')}}" alt="">
                 </div>
                 <div class="col-md-4 text-left">
-                    <a href="#" class="btn font-light">مشاهده سایر پست ها</a>
+                    <a href="{{route('boards')}}" class="btn font-light">مشاهده  پست ها</a>
                     <a href="{{route('board.create')}}#main" class="btn btn-default2 font-light">افزودن نوشته</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="StickyNav" id="fixmenu">
-        <div class="container-fluid">
+        <div class="container">
             <div class="sidebar">
                 <div class="hideSidebar"><i class="fa fa-close"></i></div>
                 <ul class="nav res-menu">
                     <li><a href="#" class="active"> خانه</a></li>
-                    <li><a href="#"> آشنایی </a></li>
+                    <li class="dropdown"><a href="#"  class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> آشنایی </a>
+                        <div class="dropdown-menu mr-5" aria-labelledby="dropdown01">
+                            <a class="dropdown-item " style="color: black"  href="#">راهنما</a>
+                        </div>
+                    </li>
+
                     <li><a href="#">شناخت نقشه برداری</a></li>
-                    <li><a href="#">نقشه ضروری مدارس </a></li>
-                    <li><a href="#">نقشه های اجماع </a></li>
+                    <li><a href="#" class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">نقشه ضروری مدارس </a>
+                        <div class="dropdown-menu mr-5 p-2" aria-labelledby="dropdown02">
+                            @foreach(\App\Models\NeedMap::all() as $needMap)
+                                <a class="dropdown-item " style="color: black"  href="{{route('map.show',$needMap->id)}}">{{$needMap->title}}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                    <li><a href="{{route('total.show')}}">نقشه های اجماع </a></li>
 
                 </ul>
             </div>
@@ -59,14 +70,26 @@
                 <button class="triggerSidebar btn"><i class="fa fa-bars"></i></button>
                 <ul class=" top-menu">
                     <li><a href="#" class="active"> خانه</a></li>
-                    <li><a href="#"> آشنایی <i class="fa fa-chevron-down"></i></a></li>
-                    <li><a href="#">شناخت نقشه برداری<i class="fa fa-chevron-down"></i></a></li>
-                    <li><a href="#">نقشه ضروری مدارس <i class="fa fa-chevron-down"></i></a></li>
-                    <li><a href="#">نقشه های اجماع <i class="fa fa-chevron-down"></i></a></li>
+                    <li><a href="#"  class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> آشنایی </a>
+                        <div class="dropdown-menu mr-5" aria-labelledby="dropdown01">
+                            <a class="dropdown-item " style="color: black"  href="#">راهنما</a>
+                        </div>
+                    </li>
+                    <li><a href="#">شناخت نقشه برداری</a></li>
+                    <li><a href="#" class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">نقشه ضروری مدارس </a>
+                        <div class="dropdown-menu mr-5 p-2" aria-labelledby="dropdown02">
+                            @foreach(\App\Models\NeedMap::all() as $needMap)
+                                <a class="dropdown-item " style="color: black"  href="{{route('map.show',$needMap->id)}}">{{$needMap->title}}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                        <li><a href="{{route('total.show')}}" >نقشه های اجماع </a>
+                        </li>
+
 
                 </ul>
-                <form class="navbar-form navbar-right">
-                    <input type="text" placeholder="جستجو کنید...." class="form-control">
+                <form class="navbar-form navbar-right" action="{{route('boards')}}">
+                    <input type="text" placeholder="جستجو کنید...." class="form-control" name="search">
                     <button class="search-btn"><img src="{{asset('assets/img/search-normal.svg')}}" alt=""></button>
                 </form>
             </div>

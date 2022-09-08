@@ -8,6 +8,19 @@ use Illuminate\Http\Request;
 
 class BoardController extends Controller
 {
+
+
+    public function all(){
+        $boards = Board::orderBy('id','desc');
+        $boards = $this->filter($boards)->where('status',1)->paginate(10);
+        return view('boards',compact('boards'));
+    }
+    public function filter($boards){
+        if (\request()->has('search')){
+            $boards = $boards->where('title','like','%'.request('search').'%')->orWhere('body','like','%'.request('search').'%')->orWhere('keywords','like','%'.request('search').'%');
+        }
+    return $boards;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -51,7 +64,6 @@ class BoardController extends Controller
             'user_id' => auth()->user()->id,
             'book_id'=> $request->book_id??null,
             'season_id'=> $request->season_id??null,
-            'user_id'=> auth()->user()->id,
         ]);
         if ($request->hasFile('file')){
             $file = $request->file('file');
